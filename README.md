@@ -2,6 +2,8 @@
 
 https://developer.mozilla.org/ru/docs/Web/API/Web_Speech_API
 
+How to enable in browsers: https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition#Browser_compatibility
+
 ## SpeechAPI JS lib
 SpeechAPI
 ### Usage
@@ -14,3 +16,6 @@ SpeechAPI.afterRecognition = function(results) {
 }
 SpeechAPI.init(true);
 ```
+----
+![compatible](https://img.shields.io/badge/Firefox%2044-Compatible-brightgreen.svg)
+![compatible](https://img.shields.io/badge/Chrome%2033-Compatible-brightgreen.svg)
