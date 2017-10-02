@@ -35,6 +35,7 @@ var SpeechAPI = {
         throw Error("SpeechAPI interface not supported in current browser");
       }
       SpeechAPI.objects.recognition = new SpeechAPI.ifaces.recognition();
+      console.log(SpeechAPI.objects.recognition);
       SpeechAPI.objects.grammar = new SpeechAPI.ifaces.grammar();
       SpeechAPI.settings.grammar +=
         "( " + SpeechAPI.settings.commands.join(" | ") + " );";
