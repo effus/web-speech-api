@@ -19,7 +19,10 @@ var PPong = {
         this.onChange(name);
       }
     },
-    onChange: function(name) {}
+    onChange: function(name) {},
+    onError: function(error) {
+      alert(error);
+    }
   },
   navigation: NavBar,
   init: function(config) {
@@ -78,6 +81,11 @@ var PPong = {
     onSetupMicBtnClick: function() {},
     onMicBtnClick: function() {
       if (PPong.controllers.activeName == "keyboard") {
+        PPong.controllers.onError = function(errorMsg) {
+          PPong.controllers.setActive("keyboard");
+          PPong.navigation.getBtn("voiceBtn").className = "";
+          alert(errorMsg);
+        };
         PPong.controllers.setActive("voice");
         PPong.navigation.getBtn("voiceBtn").className = "red";
       } else {

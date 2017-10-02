@@ -12,7 +12,9 @@ var VoiceController = {
     };
     this.API.onErrorCallback = function(error) {
       if (error == "not-allowed") {
-        throw Error("Critical error: SpeechAPI not allowed in your browser");
+        PPong.controllers.onError(
+          "Critical error: SpeechAPI not allowed in your browser"
+        );
       }
     };
     this.API.settings.interimResults = true;
@@ -22,7 +24,9 @@ var VoiceController = {
       this.API.onStopRecognition = function() {};
       this.API.onStartRecognition();
       this.underRecognize = true;
-    } else throw Error("Critical error: " + this.API.error);
+    } else {
+      PPong.controllers.onError("Critical error: " + this.API.error);
+    }
   },
   destruct: function() {
     if (this.underRecognize) {
