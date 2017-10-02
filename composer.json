@@ -1,0 +1,14 @@
+{
+    "name": "effus/web-speech-api",
+    "description": "Tools for working with Web Speech API",
+    "type": "package",
+    "license": "MPL-2.0",
+    "authors": [
+        {
+            "name": "effus",
+            "email": "effusps@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
