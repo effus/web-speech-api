@@ -3,13 +3,11 @@
     "require": [
       "/assets/telemetry.js",
       "/assets/keyboard-controller.js",
+      "/vendor/effus/web-speech-api/WebSpeechAPI.js",
       "/assets/voice-controller.js",
-      "/assets/nav-bar.js",
-      "/vendor/effus/web-speech-api/WebSpeechAPI.js"
+      "/assets/nav-bar.js"
     ],
-    "app": [
-      "/assets/ppong.js"
-    ],
+    "app": ["/assets/ppong.js"],
     "styles": []
   }
 }
