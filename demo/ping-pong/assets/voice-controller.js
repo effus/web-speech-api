@@ -13,9 +13,11 @@ var VoiceController = {
     this.API.settings.interimResults = true;
     this.API.settings.continuous = true;
     this.API.init();
-    this.API.onStopRecognition = function() {};
-    this.API.onStartRecognition();
-    this.underRecognize = true;
+    if (this.API.active) {
+      this.API.onStopRecognition = function() {};
+      this.API.onStartRecognition();
+      this.underRecognize = true;
+    } else throw Error("Critical error: " + this.API.error);
   },
   destruct: function() {
     if (this.underRecognize) {

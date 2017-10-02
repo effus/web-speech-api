@@ -21,14 +21,18 @@ var SpeechAPI = {
   init: function(andStart) {
     try {
       if (typeof SpeechRecognition != undefined) {
+        console.log("Detected: " + SpeechRecognition);
         SpeechAPI.ifaces.recognition = SpeechRecognition;
         SpeechAPI.ifaces.grammar = SpeechGrammarList;
         SpeechAPI.ifaces.event = SpeechRecognitionEvent;
       } else if (typeof webkitSpeechRecognition != undefined) {
+        console.log("Detected: " + webkitSpeechRecognition);
         SpeechAPI.ifaces.recognition = webkitSpeechRecognition;
         SpeechAPI.ifaces.grammar = webkitSpeechGrammarList;
         SpeechAPI.ifaces.event = webkitSpeechRecognitionEvent;
-      } else throw Error("SpeechAPI not supported in current browser");
+      } else {
+        throw Error("SpeechAPI not supported in current browser");
+      }
       SpeechAPI.objects.recognition = new SpeechAPI.ifaces.recognition();
       SpeechAPI.objects.grammar = new SpeechAPI.ifaces.grammar();
       SpeechAPI.settings.grammar +=
