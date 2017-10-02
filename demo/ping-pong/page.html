@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="theme-codepen">
+<head>
+<link rel="stylesheet/less" href="/assets/style.less">
+<link rel="stylesheet prefetch" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+<header class="darken"><h1>Demo: ping-pong with voice control</h1></header>
+<nav>
+  <button id="playBtn" class=""><i class="material-icons">play_arrow</i></button>
+  <button id="voiceBtn" class=""><i class="material-icons">keyboard_voice</i></button>
+  <button id="voiceSetupBtn" class=""><i class="material-icons">settings_voice</i></button>
+</nav>
+<div id="content"></div>
+<div id="telemetry">
+  <ul>
+    <li>AI difficulty: <span id="t-difficulty">?</span></li>
+    <li>Pad speed: <span id="t-speed">?</span></li>
+    <li>Ball VX: <span id="t-vx">?</span></li>
+    <li>Ball VY: <span id="t-vy">?</span></li>
+    <li>Last command: <span id="t-cmd">?</span></li>
+    <li>Controller: <span id="t-controller">?</span></li>
+    <li>Mode: <span id="t-mode">?</span></li>
+  </ul>
+  <div id="commands">
+    <div>(list of voice commands)</div>
+  </div>
+</div>
+<div id="voice_check">
+  <h2>Voice command check</h2>
+  <div id="vcr1"></div>
+  <div id="vcr2"></div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/2.6.3/svg.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.7.2/less.min.js"></script>
+<script src="/vendor/effus/frontend-tools/effus.require.js"></script>
+<script>
+  requirejs({
+    project:'DemoSpeechAPI',
+    configSrc:'/assets/require.json',
+    nocache:true
+  }, function(){
+    PPong.init();
+  });
+</script>
+</body></html>

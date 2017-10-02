@@ -1,0 +1,122 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "1b26c4783a5c45e0eea0b0b61e234aa8",
+    "packages": [
+        {
+            "name": "effus/frontend-tools",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/effus/frontend-tools.git",
+                "reference": "a31cfa9d85b7416d753f16cd51350ea91af3af36"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/effus/frontend-tools/zipball/a31cfa9d85b7416d753f16cd51350ea91af3af36",
+                "reference": "a31cfa9d85b7416d753f16cd51350ea91af3af36",
+                "shasum": ""
+            },
+            "type": "package",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "effus",
+                    "email": "effusps@gmail.com"
+                }
+            ],
+            "description": "Some frontend tools",
+            "support": {
+                "source": "https://github.com/effus/frontend-tools/tree/master",
+                "issues": "https://github.com/effus/frontend-tools/issues"
+            },
+            "time": "2017-10-02T13:52:40+00:00"
+        },
+        {
+            "name": "effus/web-speech-api",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/effus/web-speech-api.git",
+                "reference": "2b2cc39492663e0a0c8fc8e1a029a2ef6a717f77"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/effus/web-speech-api/zipball/2b2cc39492663e0a0c8fc8e1a029a2ef6a717f77",
+                "reference": "2b2cc39492663e0a0c8fc8e1a029a2ef6a717f77",
+                "shasum": ""
+            },
+            "type": "package",
+            "license": [
+                "MPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "effus",
+                    "email": "effusps@gmail.com"
+                }
+            ],
+            "description": "Tools for working with Web Speech API",
+            "support": {
+                "source": "https://github.com/effus/web-speech-api/tree/master",
+                "issues": "https://github.com/effus/web-speech-api/issues"
+            },
+            "time": "2017-10-02T11:25:10+00:00"
+        },
+        {
+            "name": "mervick/material-design-icons",
+            "version": "2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mervick/material-design-icons.git",
+                "reference": "635435c8d3df3a6da3241648caf8a65d1c07cc1a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mervick/material-design-icons/zipball/635435c8d3df3a6da3241648caf8a65d1c07cc1a",
+                "reference": "635435c8d3df3a6da3241648caf8a65d1c07cc1a",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT",
+                "CC-BY-4.0"
+            ],
+            "authors": [
+                {
+                    "name": "Andrey Izman",
+                    "email": "izmanw@gmail.com"
+                }
+            ],
+            "description": "Google Material Design Icons For Using With Bootstrap",
+            "homepage": "http://github.com/mervick/material-design-icons",
+            "keywords": [
+                "bootstrap",
+                "google",
+                "icons",
+                "icons-web-font",
+                "material",
+                "material-design",
+                "web-font"
+            ],
+            "time": "2016-02-22T01:05:40+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "effus/web-speech-api": 20,
+        "effus/frontend-tools": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

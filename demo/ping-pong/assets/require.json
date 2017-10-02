@@ -1,0 +1,15 @@
+{
+  "DemoSpeechAPI": {
+    "require": [
+      "/assets/telemetry.js",
+      "/assets/keyboard-controller.js",
+      "/assets/voice-controller.js",
+      "/assets/nav-bar.js",
+      "/vendor/effus/web-speech-api/WebSpeechAPI.js"
+    ],
+    "app": [
+      "/assets/ppong.js"
+    ],
+    "styles": []
+  }
+}
