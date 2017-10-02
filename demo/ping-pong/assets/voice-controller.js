@@ -10,6 +10,11 @@ var VoiceController = {
         PPong.controllers.getActive().setDirection("none");
       }
     };
+    this.API.onErrorCallback = function(error) {
+      if (error == "not-allowed") {
+        throw Error("Critical error: SpeechAPI not allowed in your browser");
+      }
+    };
     this.API.settings.interimResults = true;
     this.API.settings.continuous = true;
     this.API.init();

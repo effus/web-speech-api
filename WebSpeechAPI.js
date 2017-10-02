@@ -61,6 +61,9 @@ var SpeechAPI = {
       SpeechAPI.objects.recognition.onerror = function(event) {
         console.log("Error occurred in recognition: " + event.error);
         SpeechAPI.error = event.error;
+        if (typeof SpeechAPI.onErrorCallback == "function") {
+          SpeechAPI.onErrorCallback(SpeechAPI.error);
+        }
       };
       if (andStart) {
         SpeechAPI.onStartRecognition();
@@ -109,5 +112,6 @@ var SpeechAPI = {
   },
   speechEndCallback: null,
   recognitionCallback: null,
-  lastDetectedCommand: ""
+  lastDetectedCommand: "",
+  onErrorCallback: null
 };
