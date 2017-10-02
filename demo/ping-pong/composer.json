@@ -1,29 +1,29 @@
 {
-    "name": "effus/demo-speechapi-pingpong",
-    "type": "project",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "effus",
-            "email": "effusps@gamil.com"
-        }
-    ],
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/effus/web-speech-api"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/effus/frontend-tools"
-        }
-    ],
-    "require": {
-        "mervick/material-design-icons": "^2.2",
-	      "effus/web-speech-api": "dev-master",
-        "effus/frontend-tools": "dev-master"
-    },
-    "config": {
-        "optimize-autoloader": true
+  "name": "effus/demo-speechapi-pingpong",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "effus",
+      "email": "effusps@gamil.com"
     }
+  ],
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/effus/web-speech-api"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/effus/frontend-tools"
+    }
+  ],
+  "require": {
+    "mervick/material-design-icons": "^2.2",
+    "effus/web-speech-api": "dev-master",
+    "effus/frontend-tools": "dev-master"
+  },
+  "config": {
+    "optimize-autoloader": true
+  }
 }
