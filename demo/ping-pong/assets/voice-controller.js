@@ -1,0 +1,5 @@
+var VoiceController = {
+  init: function() {
+
+  }
+}
