@@ -20,12 +20,12 @@ var SpeechAPI = {
   },
   init: function(andStart) {
     try {
-      if (typeof SpeechRecognition != undefined) {
+      if (typeof SpeechRecognition != "undefined") {
         console.log("Detected: SpeechRecognition");
         SpeechAPI.ifaces.recognition = SpeechRecognition;
         SpeechAPI.ifaces.grammar = SpeechGrammarList;
         SpeechAPI.ifaces.event = SpeechRecognitionEvent;
-      } else if (typeof webkitSpeechRecognition != undefined) {
+      } else if (typeof webkitSpeechRecognition != "undefined") {
         console.log("Detected: webkitSpeechRecognition");
         SpeechAPI.ifaces.recognition = webkitSpeechRecognition;
         SpeechAPI.ifaces.grammar = webkitSpeechGrammarList;
