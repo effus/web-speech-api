@@ -13,6 +13,9 @@ var KeyboardController = {
     SVG.on(document, "keyup", function(e) {
       // key released
       PPong.controllers.getActive().setDirection("none");
+      if (e.keyCode == 32) {
+        PPong.controllers.getActive().onResume();
+      }
       e.preventDefault();
     });
   },
@@ -22,5 +25,12 @@ var KeyboardController = {
   },
   setDirection: function(name) {
     this.direction = name;
+  },
+  resumeCallback: null,
+  onResume: function() {
+    console.log("onResume", this.resumeCallback);
+    if (typeof this.resumeCallback == "function") {
+      this.resumeCallback();
+    }
   }
 };

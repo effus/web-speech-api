@@ -97,20 +97,32 @@ var PPong = {
 };
 var Game = {
   started: false,
+  paused: false,
   difficulty: 2,
   padDirection: 0,
   padSpeed: 5,
   init: function() {
-    console.log("game inited");
+    PPong.controllers.getActive().resumeCallback = function() {
+      if (Game.started) {
+        Render.resume();
+        Game.paused = false;
+      }
+    };
   },
   start: function() {
-    Render.construct();
-    Render.randomizeOnStart();
-    this.started = true;
+    if (!this.started) {
+      Render.construct();
+      Render.randomizeOnStart();
+      this.started = true;
+      this.paused = false;
+    }
   },
   stop: function() {
-    Render.destruct();
-    this.started = false;
+    if (this.started) {
+      Render.destruct();
+      this.started = false;
+      this.paused = false;
+    }
   },
   scores: {
     left: 0,
@@ -118,6 +130,7 @@ var Game = {
   },
   goal: function(winnerSide) {
     Game.scores[winnerSide]++;
+    Game.paused = true;
   }
 };
 var Render = {
@@ -375,6 +388,11 @@ var Render = {
     // reset the position of the paddles
     gameObjs.left.pad.animate(100).cy(gameObjs.area.height / 2);
     gameObjs.right.pad.animate(100).cy(gameObjs.area.height / 2);
+  },
+  resume: function() {
+    if (Game.paused) {
+      Render.randomizeOnStart();
+    }
   }
 };
 var gameObjs = {

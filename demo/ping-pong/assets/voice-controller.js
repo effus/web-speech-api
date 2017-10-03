@@ -8,6 +8,9 @@ var VoiceController = {
         PPong.controllers.getActive().setDirection("down");
       } else {
         PPong.controllers.getActive().setDirection("none");
+        if (command == "go") {
+          PPong.controllers.getActive().onResume();
+        }
       }
     };
     this.API.onErrorCallback = function(error) {
@@ -37,5 +40,11 @@ var VoiceController = {
     this.direction = name;
   },
   underRecognize: false,
-  API: SpeechAPI
+  API: SpeechAPI,
+  resumeCallback: null,
+  onResume: function() {
+    if (typeof this.resumeCallback == "function") {
+      this.resumeCallback();
+    }
+  }
 };
