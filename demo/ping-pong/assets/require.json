@@ -7,7 +7,7 @@
       "/assets/voice-controller.js",
       "/assets/nav-bar.js"
     ],
-    "app": ["/assets/ppong.js"],
+    "app": ["/assets/ppong.js", "/assets/ppong.js"],
     "styles": []
   }
 }
